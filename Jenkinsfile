@@ -11,6 +11,7 @@ credentialsId: 'b43c15d0-7df1-4e0c-bd5e-d0ca7a287179',
 url: 'https://github.com/navneetguraya/sonar.git'
 }
 }
+  stages {
   stage('SonarQube analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
@@ -22,5 +23,6 @@ url: 'https://github.com/navneetguraya/sonar.git'
       -D sonar.host.url=http://192.168.1XX.XX:9000/"
     }
   }
+}
 }
 }
