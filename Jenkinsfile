@@ -11,10 +11,10 @@ credentialsId: 'b43c15d0-7df1-4e0c-bd5e-d0ca7a287179',
 url: 'https://github.com/navneetguraya/sonar.git'
 }
 }
-  stages {
-  stage('SonarQube analysis') {
-    def scannerHome = tool 'sonarqube';
-    withSonarQubeEnv('sonarqube') {
+stages {
+stage('SonarQube analysis') {
+def scannerHome = tool 'sonarqube';
+withSonarQubeEnv('sonarqube') {
       sh "${scannerHome}/bin/sonar-scanner \
       -D sonar.login=admin \
       -D sonar.password=admin \
